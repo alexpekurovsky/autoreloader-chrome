@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Autoreload on error",
+  "description": "Reload tab if http code not equal 200",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "alarms",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
